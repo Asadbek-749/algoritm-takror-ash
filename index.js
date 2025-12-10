@@ -123,9 +123,9 @@ if (n2 > m2) {
 // 6-masala
 let narx = 35000;
 let kg = 2;
-let narx1kg = narx / kg;
+let narx1kg = narx / 1;
 
-for (let i = 1; i <= 2; i = i + 0.2) {
+for (let i = 1; i <= kg; i = i + 0.2) {
   let narxi = narx1kg * i;
   console.log(i.toFixed(1), "kg konfetning narxi:", narxi);
 }
@@ -160,3 +160,121 @@ for (i = a9; i <= b9; i++) {
   summKV += kv;
 }
 console.log("Kvadratining Yig'indisi:", summKV);
+
+// WTHILE 
+// 16-masala
+let L = 10;
+let p1 = 25;
+let sumL = L;
+let kun = 0;
+
+while (sumL < 200) {
+  kun++;
+  sumL *= 1 + p1 / 100;
+}
+console.log(kun + " kunda", parseInt(sumL), " km masofa bosadi");
+
+// 17-masala
+let N = 20;
+let M = 3;
+let B17 = 0;
+while (M <= N) {
+  N = N - M;
+  B17++;
+}
+console.log("Butun qismi", B, "Qoldiq:", N);
+
+// 18-masala
+let N1 = 125;
+let or = 0;
+let teskariN1 = 0;
+
+while (N1 > 0) {
+  or = N1 % 10;
+  N1 = parseInt(N1 / 10);
+  teskariN1 = teskariN1 * 10 + or;
+}
+console.log("N ning teskarisi:", teskariN1);
+
+// 19-masala
+let N2 = 25780;
+let or1 = 0;
+let sumN2 = 0;
+
+while (N2 > 0) {
+  or1 = N2 % 10;
+  sumN2 = sumN2 + or1;
+  N2 = parseInt(N2 / 10);
+}
+console.log("N ning raqamlar yig'indisi:", sumN2);
+
+// 20-masala,
+let n20 = 2223;
+let ikkiBormi = false;
+
+while (n20 > 0) {
+  console.log(n20 % 10);
+
+  if (n20 % 10 === 2) {
+    ikkiBormi = true;
+  }
+
+  n20 = parseInt(n20 / 10);
+}
+
+if (ikkiBormi === true) {
+  console.log("Ikki bor");
+} else {
+  console.log("Ikki yo'q");
+}
+
+// 21-masala
+let Nson2 = 235478;
+let toqBormi = false;
+
+while (Nson2 > 0) {
+  console.log(Nson2 % 10);
+
+  if (Nson2 % 2 != 0) {
+    toqBormi = true;
+  }
+  Nson2 = parseInt(Nson2 / 10);
+}
+
+if (toqBormi === true) {
+  console.log("Toq raqam bor");
+} else {
+  console.log("Toq raqam yo'q");
+}
+
+// 22-masala
+let sonT = 7;
+let i2 = 2;
+let tubSon = true;
+
+while (i2 < sonT) {
+  if (sonT % i2 == 0) {
+    tubSon = false;
+    break;
+  }
+  i2++;
+}
+
+if (tubSon === true) {
+  console.log("Tub son");
+} else {
+  console.log("Tub son emas");
+}
+
+// 23-masala
+let a23 = 6;
+let b23 = 8;
+
+while (b23 != 0) {
+  let temp = b23;
+  b23 = a23 % b23;
+  a23 = temp;
+  console.log("Oraliq natija -> a:", a23, "b:", b23);
+}
+
+console.log("EKUB:", a23);
